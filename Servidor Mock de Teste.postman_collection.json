@@ -1,0 +1,157 @@
+{
+	"info": {
+		"_postman_id": "bc016224-f7aa-4c44-9531-cc02b0612672",
+		"name": "Servidor Mock de Teste",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "32638650"
+	},
+	"item": [
+		{
+			"name": "test",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "{{url}}/test?a=no",
+					"host": [
+						"{{url}}"
+					],
+					"path": [
+						"test"
+					],
+					"query": [
+						{
+							"key": "a",
+							"value": "no"
+						}
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "Default",
+					"originalRequest": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "{{url}}/test?a=ok",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"test"
+							],
+							"query": [
+								{
+									"key": "a",
+									"value": "ok"
+								}
+							]
+						}
+					},
+					"code": 200,
+					"_postman_previewlanguage": null,
+					"header": null,
+					"cookie": [],
+					"body": "'teste':{{$randomCity}};"
+				},
+				{
+					"name": "Default Copy",
+					"originalRequest": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "{{url}}/test?a=no",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"test"
+							],
+							"query": [
+								{
+									"key": "a",
+									"value": "no"
+								}
+							]
+						}
+					},
+					"status": "Internal Server Error",
+					"code": 500,
+					"_postman_previewlanguage": null,
+					"header": null,
+					"cookie": [],
+					"body": "\"{'teste':'Erro'};\""
+				}
+			]
+		},
+		{
+			"name": "Untitled Request",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "{{url}}/",
+					"host": [
+						"{{url}}"
+					],
+					"path": [
+						""
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "Default",
+					"originalRequest": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "{{url}}/",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								""
+							]
+						}
+					},
+					"code": 200,
+					"_postman_previewlanguage": null,
+					"header": null,
+					"cookie": [],
+					"body": "\"{'teste':'ativo_2'};\""
+				}
+			]
+		}
+	],
+	"variable": [
+		{
+			"key": "url",
+			"value": "https://c5b5f3c9-65ba-4f2a-9e0a-14d9856604d0.mock.pstmn.io"
+		}
+	]
+}
